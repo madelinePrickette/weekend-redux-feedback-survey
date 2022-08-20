@@ -7,14 +7,14 @@ function Comments() {
     const history = useHistory();
     const dispatch = useDispatch();
 
-    const [comment, setComment] = useState('');
+    const [comments, setComments] = useState('');
 
     const handleSubmit = (event) => {
         event.preventDefault();
 
         dispatch({
             type: 'NEW_COMMENT',
-            payload: comment
+            payload: comments
         })
         history.push('/review')
     }
@@ -25,7 +25,7 @@ function Comments() {
             <form onSubmit={handleSubmit}>
                 <input 
                 placeholder="optional"
-                onChange={(event) => setComment(event.target.value)}
+                onChange={(event) => setComments(event.target.value)}
                 type="text"
                 />
                 <button>Next</button>

@@ -8,7 +8,7 @@ import {Provider} from 'react-redux';
 import logger from 'redux-logger';
 
 // one reducer holding one object
-const feedbackReducer = (state = {feeling: 0, understanding: 0, support: 0, comment: ''}, action) => {
+const feedbackReducer = (state = {feeling: 0, understanding: 0, support: 0, comments: ''}, action) => {
     // SWITCH STATEMENT FOR NEW_FEELING, NEW_UNDERSTANDING, NEW_SUPPORT, AND NEW_COMMENT
     // if(action.type === 'NEW_FEELING'){
     //     return {
@@ -25,10 +25,12 @@ const feedbackReducer = (state = {feeling: 0, understanding: 0, support: 0, comm
         case 'NEW_SUPPORT':
             return {...state, support: action.payload};
         case 'NEW_COMMENT':
-            return {...state, comment: action.payload};
+            return {...state, comments: action.payload};
         default:
             return state;
     }
+    // here I made a switch statement, so if the action.type is matching to 'NEW_FEELING'
+    // or
 };
 
 const reduxStore = createStore(
