@@ -1,0 +1,11 @@
+table, tr, th, td{
+    border: black 1px solid;
+    border-collapse: collapse;
+    padding: 5px;
+    min-width: 100px;
+}
+
+.entireThing{
+    margin-left: 20%;
+    margin-right: 20%;
+}

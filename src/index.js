@@ -32,13 +32,21 @@ const feedbackReducer = (state = {feeling: 0, understanding: 0, support: 0, comm
             return state;
     }
     // here I made a switch statement, so if the action.type is matching to 'NEW_FEELING'
-    // or
 };
+
+const userFeedbackReducer = (state = [], action) => {
+    if(action.type === 'SET_USER_FEEDBACK') {
+        return action.payload
+    }
+    return state;
+}
+
 
 const reduxStore = createStore(
     combineReducers({
         // reducers go here
-        feedbackReducer
+        feedbackReducer,
+        userFeedbackReducer
     }),
     applyMiddleware(logger)
 );
