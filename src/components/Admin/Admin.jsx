@@ -44,7 +44,7 @@ function Admin() {
                 </thead>
                 <tbody>
                     {userFeedbackList.map((user) => 
-                        <tr key={userFeedbackList.id}>
+                        <tr key={user.id}>
                             <td>{user.feeling}</td>
                             <td>{user.understanding}</td>
                             <td>{user.support}</td>
