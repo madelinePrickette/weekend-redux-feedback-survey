@@ -19,8 +19,12 @@ function Supported() {
         history.push('/comments')
     }
 
+    const prevPage = () => {
+        history.push('/Understanding')
+    }
+
     return(
-        <>
+        <div>
             <h3>How well are you being supported?</h3>
             <form onSubmit={handleSubmit}>
                 <input 
@@ -31,7 +35,8 @@ function Supported() {
                 />
                 <button>Next</button>
             </form>
-        </>
+            <button onClick={prevPage}>Go Back</button>
+        </div>
     )
 }
 

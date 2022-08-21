@@ -18,9 +18,13 @@ function Comments() {
         })
         history.push('/review')
     }
+
+    const prevPage = () => {
+        history.push('/supported')
+    }
         
     return(
-        <>
+        <div>
             <h3>Any comments you want to leave?</h3>
             <form onSubmit={handleSubmit}>
                 <input 
@@ -30,7 +34,8 @@ function Comments() {
                 />
                 <button>Next</button>
             </form>
-        </>
+            <button onClick={prevPage}>Go Back</button>
+        </div>
     )
 }
 

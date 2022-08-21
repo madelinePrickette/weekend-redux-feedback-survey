@@ -19,8 +19,12 @@ function Understanding() {
         history.push('/supported')
     }
 
+    const prevPage = () => {
+        history.push('/')
+    }
+
     return(
-        <>
+        <div>
             <h3>How well are you understanding the content?</h3>
             <form onSubmit={handleSubmit}>
                 <input 
@@ -31,7 +35,8 @@ function Understanding() {
                 />
                 <button>Next</button>
             </form>
-        </>
+            <button onClick={prevPage}>Go Back</button>
+        </div>
     )
 }
 

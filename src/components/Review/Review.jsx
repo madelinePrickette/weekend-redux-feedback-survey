@@ -22,16 +22,20 @@ function Review() {
             console.error('error in client post', err);
         })
     }
+
+    const prevPage = () => {
+        history.push('/comments')
+    }
     
     return(
-        <>
+        <div>
             <h3>Review your feedback</h3>
                 <li>{feedbackList.feeling}</li>
                 <li>{feedbackList.understanding}</li>
                 <li>{feedbackList.support}</li>
                 <li>{feedbackList.comments}</li>
-            <button onClick={submitFeedback}>Submit</button>
-        </>
+            <button onClick={prevPage}>Go Back</button><button onClick={submitFeedback}>Submit</button>
+        </div>
     )
 }
 

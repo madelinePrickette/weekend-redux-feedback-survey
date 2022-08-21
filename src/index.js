@@ -26,6 +26,8 @@ const feedbackReducer = (state = {feeling: 0, understanding: 0, support: 0, comm
             return {...state, support: action.payload};
         case 'NEW_COMMENT':
             return {...state, comments: action.payload};
+        case 'CLEAR_FEEDBACK':
+            return action.payload;
         default:
             return state;
     }
