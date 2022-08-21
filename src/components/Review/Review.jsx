@@ -2,6 +2,9 @@ import {useHistory} from 'react-router-dom';
 import {useSelector} from 'react-redux'
 import axios from 'axios';
 
+//MUI IMPORTS
+import Button from '@material-ui/core/Button';
+
 function Review() {
 
     const history = useHistory();
@@ -34,7 +37,7 @@ function Review() {
                 <li>{feedbackList.understanding}</li>
                 <li>{feedbackList.support}</li>
                 <li>{feedbackList.comments}</li>
-            <button onClick={prevPage}>Go Back</button><button onClick={submitFeedback}>Submit</button>
+            <Button variant="outlined" onClick={prevPage}>Go Back</Button><Button variant="outlined" color="primary" onClick={submitFeedback}>Complete</Button>
         </div>
     )
 }

@@ -2,6 +2,9 @@ import {useHistory} from 'react-router-dom';
 import {useDispatch} from 'react-redux';
 import {useState} from 'react';
 
+//MUI IMPORTS
+import Button from '@material-ui/core/Button';
+
 function Success() {
 
     const history = useHistory();
@@ -21,7 +24,7 @@ function Success() {
     return(
         <div>
             <h3>Success! Your feedback was submitted!</h3>
-            <button onClick={clearFeedback}>Take the Feedback Quiz Again!</button>
+            <Button variant="outlined" color="primary" onClick={clearFeedback}>Take the Feedback Quiz Again!</Button>
         </div>
     )
 }

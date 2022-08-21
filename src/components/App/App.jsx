@@ -16,6 +16,9 @@ import Success from '../Success/Success.jsx';
 import Supported from '../Supported/Supported.jsx';
 import Understanding from '../Understanding/Understanding.jsx';
 
+//MUI IMPORTS
+import '@fontsource/roboto';
+
 function App() {
 
   return (
