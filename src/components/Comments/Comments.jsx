@@ -1,6 +1,8 @@
 import {useHistory} from 'react-router-dom';
 import {useState} from 'react';
 import {useDispatch} from 'react-redux';
+import './Comments.css';
+
 
 //MUI IMPORTS
 import Button from '@material-ui/core/Button';
@@ -54,7 +56,7 @@ function Comments() {
     }
         
     return(
-        <div>
+        <div className="centerIt">
             <h3>Any comments you want to leave?</h3>
             <form onSubmit={handleSubmit}>
                 <TextField 

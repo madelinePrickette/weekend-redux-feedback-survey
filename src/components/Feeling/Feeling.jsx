@@ -1,6 +1,7 @@
 import {useHistory} from 'react-router-dom';
 import {useState} from 'react';
 import {useDispatch} from 'react-redux';
+import './Feeling.css';
 
 //MUI IMPORTS
 import Button from '@material-ui/core/Button';
@@ -49,7 +50,7 @@ function Feeling() {
     }
 
     return(
-        <div>
+        <div className="centerIt">
             <h3>How are you feeling today?</h3>
             <form onSubmit={handleSubmit}>
                 <TextField

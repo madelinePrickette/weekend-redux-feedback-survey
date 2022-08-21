@@ -1,6 +1,8 @@
 import {useHistory} from 'react-router-dom';
 import {useSelector} from 'react-redux'
 import axios from 'axios';
+import './Review.css';
+
 
 //MUI IMPORTS
 import Button from '@material-ui/core/Button';
@@ -31,7 +33,7 @@ function Review() {
     }
     
     return(
-        <div>
+        <div className="centerIt">
             <h3>Review your feedback</h3>
                 <li>{feedbackList.feeling}</li>
                 <li>{feedbackList.understanding}</li>

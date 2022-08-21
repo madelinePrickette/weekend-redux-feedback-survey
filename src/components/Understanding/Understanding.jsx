@@ -1,6 +1,7 @@
 import {useHistory} from 'react-router-dom';
 import {useState} from 'react';
 import {useDispatch} from 'react-redux';
+import './Understanding.css';
 
 //MUI IMPORTS
 import Button from '@material-ui/core/Button';
@@ -54,7 +55,7 @@ function Understanding() {
     }
 
     return(
-        <div>
+        <div className="centerIt">
             <h3>How well are you understanding the content?</h3>
             <form onSubmit={handleSubmit}>
                 <TextField 
